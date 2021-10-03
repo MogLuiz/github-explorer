@@ -18,6 +18,7 @@ interface Repository {
 
 const Dashboard: React.FC = () => {
   const [newRepo, setNewRepo] = useState("");
+  const [inputError, setInputError] = useState("");
   const [repositories, setRepositories] = useState<Repository[]>([]);
 
   async function handleAddRepository(
@@ -29,13 +30,21 @@ const Dashboard: React.FC = () => {
 
     event.preventDefault();
 
-    const response = await api.get<Repository>(`repos/${newRepo}`);
+    if (!newRepo) {
+      setInputError("Digite o autor/nome do repositório");
+    }
 
-    const repository = response.data;
+    try {
+      const response = await api.get<Repository>(`repos/${newRepo}`);
 
-    setRepositories([...repositories, repository]);
+      const repository = response.data;
 
-    setNewRepo("");
+      setRepositories([...repositories, repository]);
+
+      setNewRepo("");
+    } catch (err) {
+      setInputError("Erro na busca por esse repositório!");
+    }
   }
 
   return (
@@ -51,7 +60,6 @@ const Dashboard: React.FC = () => {
         />
         <button type="submit">Pesquisar</button>
       </Form>
-
       <Repositories>
         {repositories.map((repository) => (
           <a key={repository.full_name} href="teste">
