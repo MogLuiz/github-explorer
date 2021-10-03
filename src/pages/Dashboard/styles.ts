@@ -1,6 +1,10 @@
+// Packages
 import styled from 'styled-components'
 import { shade } from 'polished'
- 
+
+// Types
+import { FormProps } from './types'
+
 
 export const Title = styled.h1`
     font-size: 48px;
@@ -11,7 +15,7 @@ export const Title = styled.h1`
     margin-top: 80px;
 `
 
-export const Form = styled.form`
+export const Form = styled.form<FormProps>`
     margin-top: 40px;
     max-width: 700px;
 
