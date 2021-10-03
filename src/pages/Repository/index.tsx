@@ -1,7 +1,14 @@
-import React from 'react'
+// Packages
+import React from "react";
+import { useRouteMatch } from "react-router-dom";
+
+// Types
+import { IRepositoryParams } from "./types";
 
 const Repository: React.FC = () => {
-    return <h1>Repository</h1>
-}
+  const { params } = useRouteMatch<IRepositoryParams>();
 
-export default Repository
+  return <h1>Repository: {params.repository}</h1>;
+};
+
+export default Repository;
