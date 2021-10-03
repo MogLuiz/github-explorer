@@ -1,5 +1,5 @@
 // Packages
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { shade } from 'polished'
 
 // Types
@@ -28,11 +28,19 @@ export const Form = styled.form<FormProps>`
         border: 0;
         border-radius: 5px 0 0 5px;
         color: #3a3a3a;
+        border: 2px solid #fff;
+        border-right: 0;
+
+        ${props => props.hasError && css `
+        border-color: #c53030;
+        `}
 
         &::placeholder {
             color: #a8a8b3;
-        }
+        }      
     }
+
+
 
     button {
         width: 210px;
