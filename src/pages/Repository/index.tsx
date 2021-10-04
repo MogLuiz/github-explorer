@@ -16,8 +16,15 @@ import { IRepositoryParams, IRepository, IIssue } from "./types";
 import { Header, RepositoryInfo, Issues } from "./styles";
 
 const Repository: React.FC = () => {
+  // -------------------------------------------------
+  // States
+  // -------------------------------------------------
   const [repository, setRepository] = useState<IRepository | null>(null);
   const [issues, setIssues] = useState<IIssue[]>([]);
+
+  // -------------------------------------------------
+  // Hooks
+  // -------------------------------------------------
 
   const { params } = useRouteMatch<IRepositoryParams>();
 
@@ -30,6 +37,10 @@ const Repository: React.FC = () => {
       setIssues(response.data);
     });
   }, [params.repository]);
+
+  // -------------------------------------------------
+  // Render
+  // -------------------------------------------------
 
   return (
     <>
