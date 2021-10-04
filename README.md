@@ -1,46 +1,83 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <img alt="GoStack Bootcamp" src="https://res.cloudinary.com/marcelojrfarias/image/upload/v1587323057/gostack_gy3h7u.png" />
+    <br>
+    <img alt="GitHub Explorer" src="https://res.cloudinary.com/marcelojrfarias/image/upload/v1604355251/logo_hegw8y.svg" />
+    <br>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4 align="center">
+  An WEB Application to explore GitHub repositories.
+</h4>
 
-## Available Scripts
 
-In the project directory, you can run:
+<p align="center">
+  <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#gear-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#computer-application">Application</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>
+</p>
 
-### `yarn start`
+## :rocket: Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project was developed at the [RocketSeat GoStack Bootcamp][gostack] with the following technologies:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [ReactJS][reactjs]
+- [Styled Components][styled-components]
+- [Typescript][typescript]
+- [NodeJS][nodejs]
+- [Axios][axios]
+- [Eslint][eslint]
+- [Prettier][prettier]
+- [EditorConfig][editor-config]
+- [Visual Studio Code][vscode]
+- And some other packages...
 
-### `yarn test`
+## :gear: How To Use
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To clone and run this application, you'll need [Git][git], [Node.js v14.15.0][nodejs] or higher + [Yarn v1.22][yarn] or higher installed on your computer. From your command line:
 
-### `yarn build`
+```bash
+# Clone this repository
+$ git clone https://github.com/MogLuiz/github-explorer.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Go into the repository
+$ cd githubexplorer
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Install dependencies
+$ yarn install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Run the app
+$ yarn start
+```
 
-### `yarn eject`
+## :computer: Application
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Repositories
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  <img align="center" alt="App Screenshot" src="https://res.cloudinary.com/marcelojrfarias/image/upload/v1604356258/githubexplorer-repositories_gxtesu.png"/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Details
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  <img align="center" alt="App Screenshot" src="https://res.cloudinary.com/marcelojrfarias/image/upload/v1604356258/githubexplorer-details_hnljga.png"/>
 
-## Learn More
+## :memo: License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is under the MIT license. See the [LICENSE](https://github.com/marcelojrfarias/githubexplorer/blob/master/LICENSE) for more information.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+Made with 💗 by Luiz Henrique 👋 [Get in touch!](https://www.linkedin.com/in/luiz-henrique-9a41091b0/)
+
+[nodejs]: https://nodejs.org/
+[typescript]: https://www.typescriptlang.org/
+[gostack]: https://rocketseat.com.br/bootcamp
+[express]: https://expressjs.com/
+[git]: https://git-scm.com
+[yarn]: https://yarnpkg.com/
+[vscode]: https://code.visualstudio.com/
+[axios]: https://github.com/axios/axios
+[reactjs]: https://reactjs.org/
+[eslint]: https://eslint.org/
+[prettier]: https://prettier.io/
+[editor-config]: https://editorconfig.org/
+[styled-components]: https://styled-components.com/
