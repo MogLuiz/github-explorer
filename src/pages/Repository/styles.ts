@@ -20,7 +20,6 @@ export const Header = styled.header`
             margin-right: 4px;
         }
     }
-
-    
-
 `
+
+export const RepositoryInfo = styled.section``
