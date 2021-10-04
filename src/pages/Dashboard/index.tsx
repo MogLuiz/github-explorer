@@ -1,24 +1,24 @@
+// Packages
 import React, { useState, FormEvent, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+// Assets
 import { FiChevronRight } from "react-icons/fi";
-
-import api from "../../services/api";
-
 import logoImg from "../../assets/logo.svg";
 
+// Services
+import api from "../../services/api";
+
+// Types
+import { Repository } from "./types";
+
+// Styles
 import { Title, Form, Repositories, Error } from "./styles";
 
-interface Repository {
-  full_name: string;
-  description: string;
-  owner: {
-    login: string;
-    avatar_url: string;
-  };
-}
-
 const Dashboard: React.FC = () => {
+  // -------------------------------------------------
+  // States
+  // -------------------------------------------------
   const [newRepo, setNewRepo] = useState("");
   const [inputError, setInputError] = useState("");
   const [repositories, setRepositories] = useState<Repository[]>(() => {
@@ -33,12 +33,20 @@ const Dashboard: React.FC = () => {
     return [];
   });
 
+  // -------------------------------------------------
+  // Hooks
+  // -------------------------------------------------
+
   useEffect(() => {
     localStorage.setItem(
       "@GithubExplorer:repositories",
       JSON.stringify(repositories)
     );
   }, [repositories]);
+
+  // -------------------------------------------------
+  // Functions
+  // -------------------------------------------------
 
   async function handleAddRepository(
     event: FormEvent<HTMLFormElement>
@@ -68,6 +76,9 @@ const Dashboard: React.FC = () => {
     }
   }
 
+  // -------------------------------------------------
+  // Render
+  // -------------------------------------------------
   return (
     <>
       <img src={logoImg} alt="Logo Github Explorer" />
