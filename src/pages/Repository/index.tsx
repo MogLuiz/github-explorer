@@ -1,7 +1,10 @@
 // Packages
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { useRouteMatch, Link } from "react-router-dom";
+
+// Services
+import api from "../../services/api";
 
 // Assets
 import logoImg from "../../assets/logo.svg";
@@ -13,7 +16,20 @@ import { IRepositoryParams } from "./types";
 import { Header, RepositoryInfo, Issues } from "./styles";
 
 const Repository: React.FC = () => {
+  const [repository, setRepository] = useState(null);
+  const [issues, setIssues] = useState([]);
+
   const { params } = useRouteMatch<IRepositoryParams>();
+
+  useEffect(() => {
+    api.get(`repos/${params.repository}`).then((response) => {
+      console.log(response.data);
+    });
+
+    api.get(`repos/${params.repository}/issues`).then((response) => {
+      console.log(response.data);
+    });
+  }, [params.repository]);
 
   return (
     <>
