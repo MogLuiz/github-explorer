@@ -1,6 +1,6 @@
 // Packages
 import React from "react";
-import { FiChevronLeft } from "react-icons/fi";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { useRouteMatch, Link } from "react-router-dom";
 
 // Assets
@@ -10,7 +10,7 @@ import logoImg from "../../assets/logo.svg";
 import { IRepositoryParams } from "./types";
 
 // Styles
-import { Header, RepositoryInfo } from "./styles";
+import { Header, RepositoryInfo, Issues } from "./styles";
 
 const Repository: React.FC = () => {
   const { params } = useRouteMatch<IRepositoryParams>();
@@ -19,7 +19,7 @@ const Repository: React.FC = () => {
     <>
       <Header>
         <img src={logoImg} alt="GitHub Explorer" />
-        <Link to="/dashboard">
+        <Link to="/">
           <FiChevronLeft size={16} />
           Voltar
         </Link>
@@ -51,6 +51,17 @@ const Repository: React.FC = () => {
           </li>
         </ul>
       </RepositoryInfo>
+
+      <Issues>
+        <Link to="/sdf">
+          <div>
+            <strong>Luiz</strong>
+            <p>Henrique</p>
+          </div>
+
+          <FiChevronRight size={20} />
+        </Link>
+      </Issues>
     </>
   );
 };
