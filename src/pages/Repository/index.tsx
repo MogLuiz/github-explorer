@@ -23,11 +23,11 @@ const Repository: React.FC = () => {
 
   useEffect(() => {
     api.get(`repos/${params.repository}`).then((response) => {
-      console.log(response.data);
+      setRepository(response.data);
     });
 
     api.get(`repos/${params.repository}/issues`).then((response) => {
-      console.log(response.data);
+      setIssues(response.data);
     });
   }, [params.repository]);
 
@@ -41,42 +41,46 @@ const Repository: React.FC = () => {
         </Link>
       </Header>
 
-      <RepositoryInfo>
-        <header>
-          <img
-            src="https://avatars.githubusercontent.com/u/58401291?v=4"
-            alt="Luiz"
-          />
-          <div>
-            <strong>MogLuiz/unform</strong>
-            <p>Descrição do repositório</p>
-          </div>
-        </header>
-        <ul>
-          <li>
-            <strong>1808</strong>
-            <span>Stars</span>
-          </li>
-          <li>
-            <strong>48</strong>
-            <span>Forks</span>
-          </li>
-          <li>
-            <strong>67</strong>
-            <span>Issues abertas</span>
-          </li>
-        </ul>
-      </RepositoryInfo>
+      {repository && (
+        <RepositoryInfo>
+          <header>
+            <img
+              src={repository?.owner.avatar_url}
+              alt={repository.owner.login}
+            />
+            <div>
+              <strong>{repository.full_name}</strong>
+              <p>{repository.description}</p>
+            </div>
+          </header>
+          <ul>
+            <li>
+              <strong>{repository.stargazers_count}</strong>
+              <span>Stars</span>
+            </li>
+            <li>
+              <strong>{repository.forks_count}</strong>
+              <span>Forks</span>
+            </li>
+            <li>
+              <strong>{repository.open_issues_count}</strong>
+              <span>Issues abertas</span>
+            </li>
+          </ul>
+        </RepositoryInfo>
+      )}
 
       <Issues>
-        <Link to="/sdf">
-          <div>
-            <strong>Luiz</strong>
-            <p>Henrique</p>
-          </div>
+        {issues.map((issue) => (
+          <a key={issue.id} href={issue.html_url}>
+            <div>
+              <strong>{issue.title}</strong>
+              <p>{issue.user.login}</p>
+            </div>
 
-          <FiChevronRight size={20} />
-        </Link>
+            <FiChevronRight size={20} />
+          </a>
+        ))}
       </Issues>
     </>
   );
