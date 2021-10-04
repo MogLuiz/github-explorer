@@ -8,26 +8,7 @@
 <h4 align="center">
   An WEB Application to explore GitHub repositories.
 </h4>
-<p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/marcelojrfarias/githubexplorer.svg">
 
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/marcelojrfarias/githubexplorer.svg">
-
-  <a href="https://www.codacy.com/gh/marcelojrfarias/githubexplorer/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marcelojrfarias/githubexplorer&amp;utm_campaign=Badge_Grade">
-    <img src="https://app.codacy.com/project/badge/Grade/28d69aadfc8f41778b027da1470d1318"/>
-  </a>
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/marcelojrfarias/githubexplorer.svg">
-  <a href="https://github.com/marcelojrfarias/githubexplorer/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/marcelojrfarias/githubexplorer.svg">
-  </a>
-
-  <a href="https://github.com/marcelojrfarias/githubexplorer/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/marcelojrfarias/githubexplorer.svg">
-  </a>
-
-  <img alt="GitHub" src="https://img.shields.io/github/license/marcelojrfarias/githubexplorer.svg">
-</p>
 
 <p align="center">
   <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -57,7 +38,7 @@ To clone and run this application, you'll need [Git][git], [Node.js v14.15.0][no
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/marcelojrfarias/githubexplorer
+$ git clone https://github.com/MogLuiz/github-explorer.git
 
 # Go into the repository
 $ cd githubexplorer
