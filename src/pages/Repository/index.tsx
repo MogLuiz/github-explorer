@@ -10,14 +10,14 @@ import api from "../../services/api";
 import logoImg from "../../assets/logo.svg";
 
 // Types
-import { IRepositoryParams, IRepository } from "./types";
+import { IRepositoryParams, IRepository, IIssue } from "./types";
 
 // Styles
 import { Header, RepositoryInfo, Issues } from "./styles";
 
 const Repository: React.FC = () => {
   const [repository, setRepository] = useState<IRepository | null>(null);
-  const [issues, setIssues] = useState([]);
+  const [issues, setIssues] = useState<IIssue[]>([]);
 
   const { params } = useRouteMatch<IRepositoryParams>();
 

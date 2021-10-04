@@ -11,4 +11,12 @@ export interface IRepository {
       login: string;
       avatar_url: string;
     };
-  }
+}
+
+export interface IIssue {
+    id: number;
+    title: string;
+    user: {
+        login: string;
+    }
+}
